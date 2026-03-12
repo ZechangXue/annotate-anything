@@ -459,6 +459,7 @@ def open_settings_dialog(fig):
             "del_warn_title": "提示",
             "del_warn_msg": "至少保留一个类别。",
             "saved_msg": "设置已保存。新的模型路径会在下一张图或下次启动时生效。",
+            "contact": "如有问题请联系开发人员 Zechang （xuezechang@gmail.com）",
             "lang_label": "界面语言：",
             "lang_en": "English",
             "lang_zh": "简体中文",
@@ -480,6 +481,7 @@ def open_settings_dialog(fig):
             "del_warn_title": "Warning",
             "del_warn_msg": "At least one class must remain.",
             "saved_msg": "Settings saved. New model paths will take effect for the next image or on next launch.",
+            "contact": "For questions please contact developer Zechang (xuezechang@gmail.com).",
             "lang_label": "Language:",
             "lang_en": "English",
             "lang_zh": "简体中文",
@@ -499,6 +501,11 @@ def open_settings_dialog(fig):
     )
     lang_combo.pack(side="left", padx=(4, 0))
     ttk.Label(top_bar, text=f"({texts['lang_en']}/ {texts['lang_zh']})").pack(side="left", padx=(4, 0))
+
+    # 联系方式提示行
+    contact_bar = ttk.Frame(win)
+    contact_bar.pack(fill="x", padx=10, pady=(4, 0))
+    ttk.Label(contact_bar, text=texts["contact"], foreground="#555555").pack(side="left")
 
     # ---- Classes 编辑区 ----
     classes_frame = ttk.LabelFrame(win, text=texts["classes_frame"])

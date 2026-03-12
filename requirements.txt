@@ -1,0 +1,25 @@
+## Requirements for sam_interactive_segmentation.py (SAM2 version)
+# 安装方式（建议新建虚拟环境）：
+#   pip install -r requirements.txt
+
+# 基础深度学习与数值库
+torch>=1.13.0
+torchvision
+numpy>=1.20.0
+
+# 图像与可视化
+Pillow>=8.0.0
+matplotlib>=3.3.0
+opencv-python>=4.5.0
+
+# 数学与形态学后处理（scipy.ndimage）
+scipy>=1.7.0
+
+# SAM2 所需配置/构建依赖
+hydra-core>=1.3.0
+omegaconf>=2.3.0
+
+# 可选：Assist 模型所需 (Model assist 按钮)
+# 如果不使用 Assist 功能，可以不安装，或者之后单独安装：
+#   pip install segmentation-models-pytorch
+segmentation-models-pytorch>=0.3.0
